@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink font-sans font-light text-cream antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-serif font-medium;
+  }
+  ::selection {
+    @apply bg-wine text-cream;
+  }
+  /* Respecte la préférence « réduire les animations » */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
